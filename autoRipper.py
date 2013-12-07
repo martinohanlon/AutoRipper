@@ -16,6 +16,8 @@ class AutoRipper():
         self.cdDrive.init()
 
     def start(self):
+        #open the cd drawer
+        subprocess.call(["eject"])
         print "AutoRipper - Waiting for Audio Disk"
         #loop until a disk hasnt been inserted within the timeout
         lastTimeDiskFound = datetime.datetime.now()
